@@ -1,545 +1,630 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Services - Maynilad Water Services, Inc.</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lusitana&display=swap" rel="stylesheet">
-  
-  <style>
-	  body {
-		margin: 0;
-		font-family: 'Lusitana',serif;
-		background-color: white;
-	  }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Services - Maynilad Water Services, Inc.</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lusitana&display=swap"
+      rel="stylesheet"
+    />
 
-	  .header {
-		position: relative;
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin: 0 5vw;
-		padding: 20px 0;
-	  }
-
-	  .logo img {
-		height: 80px;
-	  }
-
-	  .nav-buttons {
-		display: flex;
-		gap: 40px;
-	  }
-
-	  .nav-buttons button {
-		background: none;
-		border: none;
-		font-family: 'Lusitana',serif;
-		font-size: 20px;
-		color: black;
-		cursor: pointer;
-		padding: 10px 5px;
-	  }
-
-	  .bill-button {
-		background-color: rgb(0, 70, 130);
-		color: white;
-		border: none;
-		padding: 12px 20px;
-		border-radius: 6px;
-		font-family: 'Lusitana',serif;
-		font-size: 18px;
-	  }
-
-	  .hamburger-btn {
-		background: none;
-		border: none;
-		cursor: pointer;
-		margin-left: 15px;
-		display: none;
-		flex-direction: column;
-		justify-content: space-around;
-		width: 25px;
-		height: 20px;
-		padding: 0;
-	  }
-
-	  .hamburger-btn span {
-		display: block;
-		width: 25px;
-		height: 3px;
-		background-color: rgb(0, 70, 130);
-		border-radius: 2px;
-	  }
-
-	  .grid-wrapper {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		margin: 0 5vw;
-		gap: 0px;
-	  }
-
-	  .grid-box {
-		display: flex;
-		flex-direction: column;
-		padding: 20px;
-		background-color: white;
-		font-family: 'Lusitana', serif;
-		text-align: left;
-	  }
-
-	  .grid-box:nth-child(odd) {
-		background-color: rgb(0, 70, 130);
-		color: white;
-	  }
-
-	  .grid-top {
-		display: flex;
-		align-items: flex-start;
-	  }
-
-	  .grid-top .box-img {
-		width: 75px;
-		height: 75px;
-		border-radius: 50%;
-		object-fit: cover;
-		display: block;
-		flex-shrink: 0;
-	  }
-
-	  .grid-bottom {
-		margin-top: 15px;
-		display: flex;
-		justify-content: center;
-	  }
-
-	  .grid-text {
-		max-width: 80%;
-		text-align: left;
-	  }
-
-	  .grid-title {
-		font-size: 30px;
-		font-weight: bold;
-		margin: 0;
-	  }
-
-	  .grid-subtitle {
-		font-size: 20px;
-		margin: 40px 0 0;
-		line-height: 1.4;
-	  }
-
-	  /* Responsive */
-	  @media (max-width: 768px) {
-		.nav-buttons {
-		  display: none;
-		  flex-direction: column;
-		  position: absolute;
-		  top: 70px;
-		  right: 5vw;
-		  background-color: white;
-		  padding: 10px 20px;
-		  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-		  border-radius: 6px;
-		  z-index: 10;
-		  width: max-content;
-		}
-
-		.nav-buttons.show {
-		  display: flex;
-		}
-
-		.hamburger-btn {
-		  display: flex;
-		}
-
-		.header-right {
-		  display: flex;
-		  align-items: center;
-		  gap: 15px;
-		}
-
-		.grid-wrapper {
-		  grid-template-columns: 1fr !important;
-		}
-
-		.grid-box {
-		  padding: 15px;
-		}
-
-		.grid-top {
-		  justify-content: center;
-		}
-
-		.grid-bottom {
-		  justify-content: center;
-		  margin-top: 10px;
-		}
-
-		.grid-text {
-		  max-width: 100%;
-		  text-align: center;
-		}
-
-		.wide-img-section {
-		  width: 100% !important;
-		  min-height: 250px;
-		  overflow: visible;
-		}
-
-		.wide-img-section img.blurred-img {
-		  height: 100%;
-		  object-fit: cover;
-		}
-
-		.wide-img-text {
-		  max-width: 90% !important;
-		  padding: 0 10px !important;
-		}
-
-		.wide-title {
-		  font-size: 24px !important;
-		}
-
-		.wide-subtitle {
-		  font-size: 16px !important;
-		}
-		
-		.footer-bottom {
-		  grid-template-columns: 1fr !important; /* stack vertically */
-		  gap: 15px;
-		  text-align: center;
-		  }
+    <style>
+      body {
+        margin: 0;
+        font-family: "Lusitana", serif;
+        background-color: white;
       }
 
-	  footer {
-		background-color: white;
-		text-align: center;
-		padding: 30px 0;
-		margin: 0 5vw;
-		font-size: 20px;
-		color: #333;
-	  }
+      .header {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 5vw;
+        padding: 20px 0;
+      }
 
-	  .footer-logo img {
-		height: 80px;
-		margin-bottom: 20px;
-	  }
+      .logo img {
+        height: 80px;
+      }
 
-	  .footer-nav button {
-		background: none;
-		border: none;
-		font-size: 18px;
-		color: black;
-		padding: 5px 10px;
-        font-family: 'Lusitana', serif;
-	  }
+      .nav-buttons {
+        display: flex;
+        gap: 40px;
+      }
 
-	  .divider {
-		border-top: 1px solid #ccc;
-		margin: 20px auto;
-		width: 80%;
-	  }
+      .nav-buttons button {
+        background: none;
+        border: none;
+        font-family: "Lusitana", serif;
+        font-size: 20px;
+        color: black;
+        cursor: pointer;
+        padding: 10px 5px;
+      }
 
-	  .footer-bottom {
-		display: grid;
-		grid-template-columns: repeat(4, 1fr);
-		gap: 20px;
-		align-items: start;
-		font-size: 14px;
-		color: #555;
-		text-align: center;
-	  }
+      .bill-button {
+        background-color: rgb(0, 70, 130);
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 6px;
+        font-family: "Lusitana", serif;
+        font-size: 18px;
+      }
 
-	  .footer-btn {
-		background: none;
-		border: none;
-		color: #555;
-		font-family: 'Lusitana', serif;
-		font-size: 14px;
-		line-height: 1.4;
-		text-align: center;
-		width: 100%;
-	  }
+      .hamburger-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        margin-left: 15px;
+        display: none;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 25px;
+        height: 20px;
+        padding: 0;
+      }
 
-	  .social-icons {
-		display: flex;
-		justify-content: center;
-		gap: 20px;
-	  }
+      .hamburger-btn span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: rgb(0, 70, 130);
+        border-radius: 2px;
+      }
 
-	  .social-icons img {
-		height: 30px;
-		width: 30px;
-		border-radius: 50%;
+      .grid-wrapper {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin: 0 5vw;
+        gap: 0px;
+      }
+
+      .grid-box {
+        display: flex;
+        flex-direction: column;
+        padding: 20px;
+        background-color: white;
+        font-family: "Lusitana", serif;
+        text-align: left;
+      }
+
+      .grid-box:nth-child(odd) {
+        background-color: rgb(0, 70, 130);
+        color: white;
+      }
+
+      .grid-top {
+        display: flex;
+        align-items: flex-start;
+      }
+
+      .grid-top .box-img {
+        width: 75px;
+        height: 75px;
+        border-radius: 50%;
         object-fit: cover;
-	  }
+        display: block;
+        flex-shrink: 0;
+      }
 
-	  .wide-img-section {
-		position: relative;
-		margin: 40px auto 20px;
-		width: calc(100% - 10vw);
-		border-radius: 12px;
-		overflow: hidden;
-		height: 300px;
-	  }
+      .grid-bottom {
+        margin-top: 15px;
+        display: flex;
+        justify-content: center;
+      }
 
-	  .wide-img-section img.blurred-img {
-		width: 100%;
-		height: 100%;
-		filter: brightness(50%) blur(4px);
-		display: block;
-		border-radius: 12px;
-		object-fit: cover;
-	  }
+      .grid-text {
+        max-width: 80%;
+        text-align: left;
+      }
 
-	  .wide-img-section .dark-overlay {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		background-color: rgba(0, 0, 0, 0.3);
-		pointer-events: none;
-		border-radius: 12px;
-		z-index: 1;
-	  }
+      .grid-title {
+        font-size: 30px;
+        font-weight: bold;
+        margin: 0;
+      }
 
-	  .wide-img-text {
-	    font-family: 'Lusitana', serif;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		z-index: 2;
-		color: white;
-		text-align: center;
-		max-width: 800px;
-		padding: 0 20px;
-	  }
+      .grid-subtitle {
+        font-size: 20px;
+        margin: 40px 0 0;
+        line-height: 1.4;
+      }
 
-	  .wide-title {
-		font-size: 40px;
-		font-weight: bold;
-		margin: 0 0 10px 0;
-	  }
+      /* Responsive */
+      @media (max-width: 768px) {
+        .nav-buttons {
+          display: none;
+          flex-direction: column;
+          position: absolute;
+          top: 70px;
+          right: 5vw;
+          background-color: white;
+          padding: 10px 20px;
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+          border-radius: 6px;
+          z-index: 10;
+          width: max-content;
+        }
 
-	  .wide-subtitle {
-		font-size: 20px;
-		margin: 0;
-		line-height: 1.4;
-	  }
+        .nav-buttons.show {
+          display: flex;
+        }
 
-	  .centered-info {
-		text-align: center;
-		margin: 30px auto;
-		font-family: 'Lusitana', serif;
-		font-size: 30px;
-		font-weight: bold;
-		color: rgb(0, 70, 130);
-		max-width: 1000px;
-		padding: 0 10px;
-		position: relative;
-		z-index: 2;
-	  }
- </style>
+        .hamburger-btn {
+          display: flex;
+        }
 
-</head>
-<body>
+        .header-right {
+          display: flex;
+          align-items: center;
+          gap: 15px;
+        }
 
-  <!-- Header -->
-  <div class="header">
-    <div class="logo">
-      <img src=url("./assets/logo.png") alt="Company Logo" />
-    </div>
+        .grid-wrapper {
+          grid-template-columns: 1fr !important;
+        }
 
-    <div class="nav-buttons" id="navButtons">
-      <button>Home</button>
-      <button>About</button>
-      <button>Services</button>
-    </div>
+        .grid-box {
+          padding: 15px;
+        }
 
-    <div class="header-right">
-      <button class="bill-button">My Water Bill</button>
-      <button class="hamburger-btn" id="hamburgerBtn" aria-label="Toggle navigation menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </div>
+        .grid-top {
+          justify-content: center;
+        }
 
-  <!-- Wide Image Section -->
-	<div class="wide-img-section">
-	  <img src=url("./assets/Services.png") alt="Highlight Image" class="blurred-img" />
-	  <div class="dark-overlay"></div>
-	  <div class="wide-img-text">
-		<h2 class="wide-title">Portfolio of Services</h2>
-		<p class="wide-subtitle">More than a business, Maynilad is a vehicle for nation building  and social transformation.</p>
-	  </div>
-	</div>
+        .grid-bottom {
+          justify-content: center;
+          margin-top: 10px;
+        }
 
-  <!-- Centered Info -->
-  <div class="centered-info">
-    SERVICES
-  </div>
+        .grid-text {
+          max-width: 100%;
+          text-align: center;
+        }
 
-  <!-- Grid Section -->
-  <div class="grid-wrapper">
-    <div class="grid-box">
-      <div class="grid-top">
-        <img src=url("./assets/S1.png") class="box-img" alt="S1" />
+        .wide-img-section {
+          width: 100% !important;
+          min-height: 250px;
+          overflow: visible;
+        }
+
+        .wide-img-section img.blurred-img {
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .wide-img-text {
+          max-width: 90% !important;
+          padding: 0 10px !important;
+        }
+
+        .wide-title {
+          font-size: 24px !important;
+        }
+
+        .wide-subtitle {
+          font-size: 16px !important;
+        }
+
+        .footer-bottom {
+          grid-template-columns: 1fr !important; /* stack vertically */
+          gap: 15px;
+          text-align: center;
+        }
+      }
+
+      footer {
+        background-color: white;
+        text-align: center;
+        padding: 30px 0;
+        margin: 0 5vw;
+        font-size: 20px;
+        color: #333;
+      }
+
+      .footer-logo img {
+        height: 80px;
+        margin-bottom: 20px;
+      }
+
+      .footer-nav button {
+        background: none;
+        border: none;
+        font-size: 18px;
+        color: black;
+        padding: 5px 10px;
+        font-family: "Lusitana", serif;
+      }
+
+      .divider {
+        border-top: 1px solid #ccc;
+        margin: 20px auto;
+        width: 80%;
+      }
+
+      .footer-bottom {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        align-items: start;
+        font-size: 14px;
+        color: #555;
+        text-align: center;
+      }
+
+      .footer-btn {
+        background: none;
+        border: none;
+        color: #555;
+        font-family: "Lusitana", serif;
+        font-size: 14px;
+        line-height: 1.4;
+        text-align: center;
+        width: 100%;
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .social-icons img {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .wide-img-section {
+        position: relative;
+        margin: 40px auto 20px;
+        width: calc(100% - 10vw);
+        border-radius: 12px;
+        overflow: hidden;
+        height: 300px;
+      }
+
+      .wide-img-section img.blurred-img {
+        width: 100%;
+        height: 100%;
+        filter: brightness(50%) blur(4px);
+        display: block;
+        border-radius: 12px;
+        object-fit: cover;
+      }
+
+      .wide-img-section .dark-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.3);
+        pointer-events: none;
+        border-radius: 12px;
+        z-index: 1;
+      }
+
+      .wide-img-text {
+        font-family: "Lusitana", serif;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        color: white;
+        text-align: center;
+        max-width: 800px;
+        padding: 0 20px;
+      }
+
+      .wide-title {
+        font-size: 40px;
+        font-weight: bold;
+        margin: 0 0 10px 0;
+      }
+
+      .wide-subtitle {
+        font-size: 20px;
+        margin: 0;
+        line-height: 1.4;
+      }
+
+      .centered-info {
+        text-align: center;
+        margin: 30px auto;
+        font-family: "Lusitana", serif;
+        font-size: 30px;
+        font-weight: bold;
+        color: rgb(0, 70, 130);
+        max-width: 1000px;
+        padding: 0 10px;
+        position: relative;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <div class="header">
+      <div class="logo">
+        <img src="assets/logo.png" alt="Company Logo" />
       </div>
-      <div class="grid-bottom">
-        <div class="grid-text">
-          <h3 class="grid-title">WATER SUPPLY AND FACILITIES MANAGEMENT</h3>
-          <p class="grid-subtitle">Assessment of the suitability of a water source to suupply raw water, and determination of the applicable treatment process to convert raw water for specific use</p>
+
+      <div class="nav-buttons" id="navButtons">
+        <button>Home</button>
+        <button>About</button>
+        <button>Services</button>
+      </div>
+
+      <div class="header-right">
+        <button class="bill-button">My Water Bill</button>
+        <button
+          class="hamburger-btn"
+          id="hamburgerBtn"
+          aria-label="Toggle navigation menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Wide Image Section -->
+    <div class="wide-img-section">
+      <img
+        src="assets/Services.png"
+        alt="Highlight Image"
+        class="blurred-img"
+      />
+      <div class="dark-overlay"></div>
+      <div class="wide-img-text">
+        <h2 class="wide-title">Portfolio of Services</h2>
+        <p class="wide-subtitle">
+          More than a business, Maynilad is a vehicle for nation building and
+          social transformation.
+        </p>
+      </div>
+    </div>
+
+    <!-- Centered Info -->
+    <div class="centered-info">SERVICES</div>
+
+    <!-- Grid Section -->
+    <div class="grid-wrapper">
+      <div class="grid-box">
+        <div class="grid-top">
+          <img src="assets/S1.png" class="box-img" alt="S1" />
+        </div>
+        <div class="grid-bottom">
+          <div class="grid-text">
+            <h3 class="grid-title">WATER SUPPLY AND FACILITIES MANAGEMENT</h3>
+            <p class="grid-subtitle">
+              Assessment of the suitability of a water source to suupply raw
+              water, and determination of the applicable treatment process to
+              convert raw water for specific use
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-box">
+        <div class="grid-top">
+          <img src="assets/S2.png" class="box-img" alt="S2" />
+        </div>
+        <div class="grid-bottom">
+          <div class="grid-text">
+            <h3 class="grid-title">NON-REVENUE WATER (NRW) MANAGEMENT</h3>
+            <p class="grid-subtitle">
+              Employing cost-effective NRW management approaches to
+              significantly reduce water loss and, thus, reduce financial losses
+              linked to high NRW
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-box">
+        <div class="grid-top">
+          <img src="assets/S3.png" class="box-img" alt="S3" />
+        </div>
+        <div class="grid-bottom">
+          <div class="grid-text">
+            <h3 class="grid-title">
+              GEOGRAPHIC INFORMATION SYSTEM (GIS) DEVELOPMENT
+            </h3>
+            <p class="grid-subtitle">
+              Harnessing the power of information technology to implement an
+              effective workflow for data gathering, production, management and
+              delivery.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-box">
+        <div class="grid-top">
+          <img src="assets/S4.png" class="box-img" alt="S4" />
+        </div>
+        <div class="grid-bottom">
+          <div class="grid-text">
+            <h3 class="grid-title">WASTE WATER MANAGEMENT</h3>
+            <p class="grid-subtitle">
+              Integrating sustainability at the heart of business operation
+              while ensuring compliance with government regulations
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-box">
+        <div class="grid-top">
+          <img src="assets/S5.png" class="box-img" alt="S5" />
+        </div>
+        <div class="grid-bottom">
+          <div class="grid-text">
+            <h3 class="grid-title">ESTATE MANAGEMENT</h3>
+            <p class="grid-subtitle">
+              Managing the overall water and wastewater system to provide
+              hassle-free, day-to-day operations of existing facilities
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-box">
+        <div class="grid-top">
+          <img src="assets/S6.png" class="box-img" alt="S6" />
+        </div>
+        <div class="grid-bottom">
+          <div class="grid-text">
+            <h3 class="grid-title">UTILITY MANAGEMENT SERVICE</h3>
+            <p class="grid-subtitle">
+              A robust customer management and billing software solution,
+              designed and developed by Maynilad, that is highly customizable
+              and available for subscription
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-box">
+        <div class="grid-top">
+          <img src="assets/S7.png" class="box-img" alt="S7" />
+        </div>
+        <div class="grid-bottom">
+          <div class="grid-text">
+            <h3 class="grid-title">PROJECT MANAGEMENT</h3>
+            <p class="grid-subtitle">
+              Providing end-to-end project management for all types of water and
+              wastewater projects, with strict adherence to timeliness and
+              quality
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-box">
+        <div class="grid-top">
+          <img src="assets/S8.png" class="box-img" alt="S8" />
+        </div>
+        <div class="grid-bottom">
+          <div class="grid-text">
+            <h3 class="grid-title">FEASIBILITY STUDY</h3>
+            <p class="grid-subtitle">
+              Comprehensive study on the water operation situation to ensure
+              viability based on technical, economic and social data
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid-box">
+        <div class="grid-top">
+          <img src="assets/S9.png" class="box-img" alt="S9" />
+        </div>
+        <div class="grid-bottom">
+          <div class="grid-text">
+            <h3 class="grid-title">PIPE-LAYING</h3>
+            <p class="grid-subtitle">
+              Design and implementation of new pie-laying, interconnection
+              and/or pipe replacement projects
+            </p>
+          </div>
         </div>
       </div>
     </div>
 
-    <div class="grid-box">
-      <div class="grid-top">
-        <img src=url("./assets/S2.png") class="box-img" alt="S2" />
-      </div>
-      <div class="grid-bottom">
-        <div class="grid-text">
-          <h3 class="grid-title">NON-REVENUE WATER (NRW) MANAGEMENT</h3>
-          <p class="grid-subtitle">Employing cost-effective NRW management approaches to significantly reduce water loss and, thus, reduce financial losses linked to high NRW</p>
+    <!-- Footer -->
+    <footer>
+      <div class="footer-content-wrapper">
+        <div class="footer-logo">
+          <img src="assets/logo.png" alt="Company Logo" />
+        </div>
+
+        <div class="footer-nav">
+          <button>About Us</button>
+          <button>Our Services</button>
+          <button>Support Center</button>
+          <button>Privacy Policy</button>
+          <button>Terms of Use</button>
+        </div>
+
+        <div class="container border-top pt-4">
+          <div class="row text-center">
+            <div class="col-md-4 mb-4">
+              <h5 class="fw-bold text-white text-md-dark">Socials</h5>
+              <div class="d-flex justify-content-center gap-3 mt-2">
+                <a href="#"
+                  ><img
+                    src="assets/SF.png"
+                    alt="Facebook"
+                    width="24"
+                    height="24"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="assets/SX.png"
+                    alt="Twitter"
+                    width="24"
+                    height="24"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="assets/SY.png"
+                    alt="YouTube"
+                    width="24"
+                    height="24"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="assets/SI.png"
+                    alt="LinkedIn"
+                    width="24"
+                    height="24"
+                /></a>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <h5 class="fw-bold text-md-dark">Address</h5>
+              <address class="mt-2 mb-0 text-md-dark">
+                <p class="mb-1">
+                  Maynilad Building, MWSS Complex<br />
+                  Katipunan Avenue, Pansol 1119<br />
+                  Quezon City, Philippines
+                </p>
+              </address>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <h5 class="fw-bold text-white text-md-dark">Hotline</h5>
+              <p class="mt-2 mb-0 text-md-dark">1626</p>
+            </div>
+          </div>
+
+          <div class="text-center border-top pt-3 pb-2">
+            <small class="text-md-dark"
+              >©2023 Maynilad Water Services, Inc.</small
+            >
+          </div>
         </div>
       </div>
-    </div>
+    </footer>
 
-    <div class="grid-box">
-      <div class="grid-top">
-        <img src=url("./assets/S3.png") class="box-img" alt="S3" />
-      </div>
-      <div class="grid-bottom">
-        <div class="grid-text">
-          <h3 class="grid-title">GEOGRAPHIC INFORMATION SYSTEM (GIS) DEVELOPMENT</h3>
-          <p class="grid-subtitle">Harnessing the power of information technology to implement an effective workflow for data gathering, production, management and delivery.</p>
-        </div>
-      </div>
-    </div>
+    <script>
+      // Hamburger menu toggle
+      const hamburgerBtn = document.getElementById("hamburgerBtn");
+      const navButtons = document.getElementById("navButtons");
 
-    <div class="grid-box">
-      <div class="grid-top">
-        <img src=url("./assets/S4.png") class="box-img" alt="S4" />
-      </div>
-      <div class="grid-bottom">
-        <div class="grid-text">
-          <h3 class="grid-title">WASTE WATER MANAGEMENT</h3>
-          <p class="grid-subtitle">Integrating sustainability at the heart of business operation while ensuring compliance with government regulations</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid-box">
-      <div class="grid-top">
-        <img src=url("./assets/S5.png") class="box-img" alt="S5" />
-      </div>
-      <div class="grid-bottom">
-        <div class="grid-text">
-          <h3 class="grid-title">ESTATE MANAGEMENT</h3>
-          <p class="grid-subtitle">Managing the overall water and wastewater system to provide hassle-free, day-to-day operations of existing facilities</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid-box">
-      <div class="grid-top">
-        <img src=url("./assets/S6.png") class="box-img" alt="S6" />
-      </div>
-      <div class="grid-bottom">
-        <div class="grid-text">
-          <h3 class="grid-title">UTILITY MANAGEMENT SERVICE</h3>
-          <p class="grid-subtitle">A robust customer management and billing software solution, designed and developed by Maynilad, that is highly customizable and available for subscription</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid-box">
-      <div class="grid-top">
-        <img src=url("./assets/S7.png") class="box-img" alt="S7" />
-      </div>
-      <div class="grid-bottom">
-        <div class="grid-text">
-          <h3 class="grid-title">PROJECT MANAGEMENT</h3>
-          <p class="grid-subtitle">Providing end-to-end project management for all types of water and wastewater projects, with strict adherence to timeliness and quality</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid-box">
-      <div class="grid-top">
-        <img src=url("./assets/S8.png") class="box-img" alt="S8" />
-      </div>
-      <div class="grid-bottom">
-        <div class="grid-text">
-          <h3 class="grid-title">FEASIBILITY STUDY</h3>
-          <p class="grid-subtitle">Comprehensive study on the water operation situation to ensure viability based on technical, economic and social data</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="grid-box">
-      <div class="grid-top">
-        <img src=url("./assets/S9.png") class="box-img" alt="S9" />
-      </div>
-      <div class="grid-bottom">
-        <div class="grid-text">
-          <h3 class="grid-title">PIPE-LAYING</h3>
-          <p class="grid-subtitle">Design and implementation of new pie-laying, interconnection and/or pipe replacement projects</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Footer -->
-  <footer>
-	<div class="footer-logo">
-		<img src=url("./assets/logo.png") alt="Company Logo" />
-	  </div>
-
-	  <div class="footer-nav">
-		<button>About Us</button>
-		<button>Our Services</button>
-		<button>Support Center</button>
-		<button>Privacy Policy</button>
-		<button>Terms of Use</button>
-	  </div>
-
-	  <div class="divider"></div>
-
-	  <div class="footer-bottom">
-		<div>
-		  <button class="footer-btn">2024 Copyright Maynilad Water Services, Inc.</button>
-		</div>
-		<div>
-		  <button class="footer-btn">Telephone: (02) 8888-8888</button>
-		</div>
-		<div>
-		  <button class="footer-btn">Address: 123 Waterway, Metro Manila</button>
-		</div>
-		<div class="social-icons">
-		  <img src=url("./assets/SF.png") alt="Facebook" />
-		  <img src=url("./assets/SX.png") alt="Twitter" />
-		  <img src=url("./assets/SY.png") alt="Youtube" />
-		  <img src=url("./assets/SI.png") alt="Instagram" />
-		</div>
-	  </div>
-  </footer>
-
-  <script>
-    // Hamburger menu toggle
-    const hamburgerBtn = document.getElementById('hamburgerBtn');
-    const navButtons = document.getElementById('navButtons');
-
-    hamburgerBtn.addEventListener('click', () => {
-      navButtons.classList.toggle('show');
-    });
-  </script>
-
-</body>
+      hamburgerBtn.addEventListener("click", () => {
+        navButtons.classList.toggle("show");
+      });
+    </script>
+  </body>
 </html>
