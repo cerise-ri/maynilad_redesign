@@ -99,39 +99,26 @@
       }
 
       .footer-bottom {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr auto;
-        gap: 20px;
-        align-items: start;
-        font-size: 14px;
-        color: #555;
-        text-align: left;
+        display: flex;
+        width: 100%;
       }
-
-      .footer-bottom-left {
-        text-align: left;
-      }
-
-      .footer-bottom-center {
+      .footer-bottom > * {
+        width: 25%;
+        display: flex;
+        align-items: flex-start;
+        justify-items: center;
         text-align: center;
       }
 
-      .footer-bottom-right {
-        text-align: left;
-      }
-
-      .footer-bottom-social {
-        text-align: right;
-      }
-
       .footer-btn {
+        width: 100%;
         background: none;
         border: none;
         color: #555;
         font-family: "Lusitana", serif;
         font-size: 14px;
         line-height: 1.4;
-        padding: 0;
+        padding-inline: 24px;
         cursor: default;
         white-space: normal;
       }
@@ -148,8 +135,13 @@
         border-radius: 50%;
         object-fit: cover;
       }
-
+      .text-md-dark {
+        color: #212529 !important;
+      }
       @media (max-width: 768px) {
+        .text-md-dark {
+          color: rgb(211, 211, 211) !important;
+        }
         footer {
           background-color: #0d0d0d;
           color: white;
@@ -462,7 +454,7 @@
     <footer>
       <div class="footer-content-wrapper">
         <div class="footer-logo">
-          <img src=url("./assets/logo.png") alt="Company Logo" />
+          <img src="assets/logo.png" alt="Company Logo" />
         </div>
 
         <div class="footer-nav">
@@ -473,40 +465,63 @@
           <button>Terms of Use</button>
         </div>
 
-        <div class="divider"></div>
+        <div class="container border-top pt-4">
+          <div class="row text-center">
+            <div class="col-md-4 mb-4">
+              <h5 class="fw-bold text-white text-md-dark">Socials</h5>
+              <div class="d-flex justify-content-center gap-3 mt-2">
+                <a href="#"
+                  ><img
+                    src="assets/SF.png"
+                    alt="Facebook"
+                    width="24"
+                    height="24"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="assets/SX.png"
+                    alt="Twitter"
+                    width="24"
+                    height="24"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="assets/SY.png"
+                    alt="YouTube"
+                    width="24"
+                    height="24"
+                /></a>
+                <a href="#"
+                  ><img
+                    src="assets/SI.png"
+                    alt="LinkedIn"
+                    width="24"
+                    height="24"
+                /></a>
+              </div>
+            </div>
 
-        <div class="footer-bottom">
-          <div class="footer-bottom-left">
-            <button class="footer-btn">
-              ©2023 Maynilad Water Services, Inc.
-            </button>
+            <div class="col-md-4 mb-4">
+              <h5 class="fw-bold text-md-dark">Address</h5>
+              <address class="mt-2 mb-0 text-md-dark">
+                <p class="mb-1">
+                  Maynilad Building, MWSS Complex<br />
+                  Katipunan Avenue, Pansol 1119<br />
+                  Quezon City, Philippines
+                </p>
+              </address>
+            </div>
+
+            <div class="col-md-4 mb-4">
+              <h5 class="fw-bold text-white text-md-dark">Hotline</h5>
+              <p class="mt-2 mb-0 text-md-dark">1626</p>
+            </div>
           </div>
-          <div class="footer-bottom-center">
-            <button class="footer-btn">
-              Maynilad Building, MWSS Complex Katipunan Avenue,<br />Pansol
-              1119<br />Quezon City, Philippines
-            </button>
-          </div>
-          <div class="footer-bottom-right">
-            <button class="footer-btn">Hotline: 1626</button>
-          </div>
-          <div class="social-icons footer-bottom-social">
-            <img
-              src=url("./assets/SF.png")
-              alt="Facebook"
-            />
-            <img
-              src=url("./assets/SX.png")
-              alt="Twitter"
-            />
-            <img
-              src=url("./assets/SY.png")
-              alt="Youtube"
-            />
-            <img
-              src=url("./assets/SI.png")
-              alt="LinkedIn"
-            />
+
+          <div class="text-center border-top pt-3 pb-2">
+            <small class="text-md-dark"
+              >©2023 Maynilad Water Services, Inc.</small
+            >
           </div>
         </div>
       </div>
