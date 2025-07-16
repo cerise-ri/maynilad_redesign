@@ -709,10 +709,11 @@
       }
 
       .reviewBoxes {
-        width: 30%;
+        width: 40%;
         height: auto;
         display: flex;
-        align-items: left;
+        align-items: center;
+        text-align: center;
         flex-direction: column;
         border: 2px solid #1a4976;
         border-radius: 16px;
@@ -730,7 +731,7 @@
         background: #ffffff;
         border-radius: 50%;
         border: 3px solid #0c4c83;
-        margin: 40px auto 0;
+        margin: 0 auto;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
         display: flex;
         align-items: center;
@@ -1045,7 +1046,6 @@
         }
       }
 
-      @media (min-width: 1200px) {
       @media (min-width: 1440px) {
         .heroflex {
           width: 85%;
@@ -1610,6 +1610,9 @@
         line-height: 1;
         letter-spacing: 4px;
         color: #ccc;
+        text-align: center; /* Add this to center the stars */
+        width: 100%; /* Ensure it takes full width */
+        margin: 10px 0; /* Adjust spacing as needed */
       }
 
       .stars-3::before {
