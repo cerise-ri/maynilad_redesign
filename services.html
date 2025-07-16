@@ -8,6 +8,12 @@
       href="https://fonts.googleapis.com/css2?family=Lusitana&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
 
     <style>
       body {
@@ -16,65 +22,11 @@
         background-color: white;
       }
 
-      .header {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin: 0 5vw;
-        padding: 20px 0;
-      }
-
       .logo img {
         height: 80px;
       }
 
-      .nav-buttons {
-        display: flex;
-        gap: 40px;
-      }
-
-      .nav-buttons button {
-        background: none;
-        border: none;
-        font-family: "Lusitana", serif;
-        font-size: 20px;
-        color: black;
-        cursor: pointer;
-        padding: 10px 5px;
-      }
-
-      .bill-button {
-        background-color: rgb(0, 70, 130);
-        color: white;
-        border: none;
-        padding: 12px 20px;
-        border-radius: 6px;
-        font-family: "Lusitana", serif;
-        font-size: 18px;
-      }
-
-      .hamburger-btn {
-        background: none;
-        border: none;
-        cursor: pointer;
-        margin-left: 15px;
-        display: none;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 25px;
-        height: 20px;
-        padding: 0;
-      }
-
-      .hamburger-btn span {
-        display: block;
-        width: 25px;
-        height: 3px;
-        background-color: rgb(0, 70, 130);
-        border-radius: 2px;
-      }
-
+      /* Grid Styles */
       .grid-wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -133,152 +85,7 @@
         line-height: 1.4;
       }
 
-      /* Responsive */
-      @media (max-width: 768px) {
-        .nav-buttons {
-          display: none;
-          flex-direction: column;
-          position: absolute;
-          top: 70px;
-          right: 5vw;
-          background-color: white;
-          padding: 10px 20px;
-          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-          border-radius: 6px;
-          z-index: 10;
-          width: max-content;
-        }
-
-        .nav-buttons.show {
-          display: flex;
-        }
-
-        .hamburger-btn {
-          display: flex;
-        }
-
-        .header-right {
-          display: flex;
-          align-items: center;
-          gap: 15px;
-        }
-
-        .grid-wrapper {
-          grid-template-columns: 1fr !important;
-        }
-
-        .grid-box {
-          padding: 15px;
-        }
-
-        .grid-top {
-          justify-content: center;
-        }
-
-        .grid-bottom {
-          justify-content: center;
-          margin-top: 10px;
-        }
-
-        .grid-text {
-          max-width: 100%;
-          text-align: center;
-        }
-
-        .wide-img-section {
-          width: 100% !important;
-          min-height: 250px;
-          overflow: visible;
-        }
-
-        .wide-img-section img.blurred-img {
-          height: 100%;
-          object-fit: cover;
-        }
-
-        .wide-img-text {
-          max-width: 90% !important;
-          padding: 0 10px !important;
-        }
-
-        .wide-title {
-          font-size: 24px !important;
-        }
-
-        .wide-subtitle {
-          font-size: 16px !important;
-        }
-
-        .footer-bottom {
-          grid-template-columns: 1fr !important; /* stack vertically */
-          gap: 15px;
-          text-align: center;
-        }
-      }
-
-      footer {
-        background-color: white;
-        text-align: center;
-        padding: 30px 0;
-        margin: 0 5vw;
-        font-size: 20px;
-        color: #333;
-      }
-
-      .footer-logo img {
-        height: 80px;
-        margin-bottom: 20px;
-      }
-
-      .footer-nav button {
-        background: none;
-        border: none;
-        font-size: 18px;
-        color: black;
-        padding: 5px 10px;
-        font-family: "Lusitana", serif;
-      }
-
-      .divider {
-        border-top: 1px solid #ccc;
-        margin: 20px auto;
-        width: 80%;
-      }
-
-      .footer-bottom {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-        align-items: start;
-        font-size: 14px;
-        color: #555;
-        text-align: center;
-      }
-
-      .footer-btn {
-        background: none;
-        border: none;
-        color: #555;
-        font-family: "Lusitana", serif;
-        font-size: 14px;
-        line-height: 1.4;
-        text-align: center;
-        width: 100%;
-      }
-
-      .social-icons {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-      }
-
-      .social-icons img {
-        height: 30px;
-        width: 30px;
-        border-radius: 50%;
-        object-fit: cover;
-      }
-
+      /* Wide Image Section Styles */
       .wide-img-section {
         position: relative;
         margin: 40px auto 20px;
@@ -334,6 +141,7 @@
         line-height: 1.4;
       }
 
+      /* Centered Info Styles */
       .centered-info {
         text-align: center;
         margin: 30px auto;
@@ -346,34 +154,303 @@
         position: relative;
         z-index: 2;
       }
+
+      .btn-custom {
+        background-color: #0c4c83;
+        color: white;
+        border: none;
+      }
+      .btn-custom:hover {
+        background-color: #093b66;
+      }
+
+      footer {
+        background-color: white;
+        padding: 30px 0;
+        font-size: 20px;
+        color: #333;
+      }
+
+      .footer-content-wrapper {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 15px;
+      }
+
+      .footer-logo {
+        text-align: center;
+      }
+
+      .footer-logo img {
+        height: 80px;
+        margin-bottom: 20px;
+        display: inline-block;
+      }
+
+      .footer-nav {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+      }
+
+      .footer-nav button {
+        background: none;
+        border: none;
+        font-size: 18px;
+        color: black;
+        padding: 0;
+        font-family: "Lusitana", serif;
+        cursor: pointer;
+      }
+
+      .footer-nav button:hover {
+        text-decoration: underline;
+      }
+
+      .divider {
+        border-top: 1px solid #ccc;
+        margin: 20px auto;
+        width: 80%;
+      }
+
+      .footer-bottom {
+        display: flex;
+        width: 100%;
+      }
+
+      .footer-bottom > * {
+        width: 25%;
+        display: flex;
+        align-items: flex-start;
+        justify-items: center;
+        text-align: center;
+      }
+
+      .footer-btn {
+        width: 100%;
+        background: none;
+        border: none;
+        color: #555;
+        font-family: "Lusitana", serif;
+        font-size: 14px;
+        line-height: 1.4;
+        padding-inline: 24px;
+        cursor: default;
+        white-space: normal;
+      }
+
+      .social-icons {
+        display: flex;
+        justify-content: flex-end;
+        gap: 20px;
+      }
+
+      .social-icons img {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .text-md-dark {
+        color: #212529 !important;
+      }
+
+      @media (max-width: 768px) {
+        .grid-wrapper {
+          grid-template-columns: 1fr !important;
+        }
+
+        .grid-box {
+          padding: 15px;
+        }
+
+        .grid-top {
+          justify-content: center;
+        }
+
+        .grid-bottom {
+          justify-content: center;
+          margin-top: 10px;
+        }
+
+        .grid-text {
+          max-width: 100%;
+          text-align: center;
+        }
+
+        .wide-img-section {
+          width: 100% !important;
+          min-height: 250px;
+          overflow: visible;
+        }
+
+        .wide-img-section img.blurred-img {
+          height: 100%;
+          object-fit: cover;
+        }
+
+        .wide-img-text {
+          max-width: 90% !important;
+          padding: 0 10px !important;
+        }
+
+        .wide-title {
+          font-size: 24px !important;
+        }
+
+        .wide-subtitle {
+          font-size: 16px !important;
+        }
+
+        .text-md-dark {
+          color: rgb(211, 211, 211) !important;
+        }
+        footer {
+          background-color: #0d0d0d;
+          color: white;
+          padding: 25px 15px;
+          margin: 0;
+        }
+
+        .footer-content-wrapper {
+          padding: 0 20px;
+        }
+
+        .footer-logo {
+          text-align: center;
+        }
+        .footer-logo img {
+          height: 70px;
+          margin: 0 auto 25px auto;
+        }
+
+        .footer-nav {
+          flex-direction: row;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 15px;
+          margin-bottom: 25px;
+        }
+
+        .footer-nav button {
+          color: white;
+          font-size: 18px;
+          font-weight: 700;
+          white-space: nowrap;
+        }
+
+        .divider {
+          border-top: 1px solid #444;
+          margin: 25px 0;
+        }
+
+        .footer-bottom {
+          grid-template-columns: 1fr auto 1fr;
+          grid-template-rows: auto auto;
+          gap: 10px;
+          align-items: start;
+          font-size: 16px;
+          color: #bbb;
+          display: grid;
+          width: auto;
+        }
+
+        .footer-bottom-left {
+          grid-column: 1 / 2;
+          grid-row: 1 / 2;
+          text-align: left;
+        }
+
+        .footer-bottom-center {
+          grid-column: 2 / 3;
+          grid-row: 1 / 2;
+          text-align: center;
+          margin: 0 auto;
+          padding: 0 5px;
+        }
+
+        .footer-bottom-right {
+          grid-column: 3 / 4;
+          grid-row: 1 / 2;
+          text-align: right;
+        }
+
+        .footer-bottom-social {
+          grid-column: 1 / span 3;
+          grid-row: 2 / 3;
+          text-align: center;
+        }
+
+        .footer-btn {
+          color: #bbb;
+          font-size: 16px;
+          padding: 0;
+          cursor: default;
+        }
+        .footer-btn br {
+          display: block;
+        }
+
+        .social-icons {
+          justify-content: center;
+          gap: 15px;
+          margin-top: 15px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .footer-bottom {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto;
+          gap: 15px;
+        }
+
+        .footer-bottom > div {
+          grid-column: 1 / -1;
+          text-align: center !important;
+          padding: 0;
+        }
+      }
     </style>
   </head>
   <body>
     <!-- Header -->
-    <div class="header">
-      <div class="logo">
-        <img src="assets/logo.png" alt="Company Logo" />
-      </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img src="assets/logo.png" alt="Maynilad Logo" height="100" />
+        </a>
 
-      <div class="nav-buttons" id="navButtons">
-        <button>Home</button>
-        <button>About</button>
-        <button>Services</button>
-      </div>
-
-      <div class="header-right">
-        <button class="bill-button">My Water Bill</button>
         <button
-          class="hamburger-btn"
-          id="hamburgerBtn"
-          aria-label="Toggle navigation menu"
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          <span class="navbar-toggler-icon"></span>
         </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link fw-semibold px-3" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold px-3" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-semibold px-3" href="services.html"
+                >Services</a
+              >
+            </li>
+          </ul>
+          <a class="btn btn-custom px-4 py-1">My Water Bill</a>
+        </div>
       </div>
-    </div>
+    </nav>
 
     <!-- Wide Image Section -->
     <div class="wide-img-section">
@@ -617,14 +694,14 @@
       </div>
     </footer>
 
-    <script>
-      // Hamburger menu toggle
-      const hamburgerBtn = document.getElementById("hamburgerBtn");
-      const navButtons = document.getElementById("navButtons");
-
-      hamburgerBtn.addEventListener("click", () => {
-        navButtons.classList.toggle("show");
-      });
-    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
   </body>
 </html>
