@@ -122,9 +122,59 @@
       }
 
       .logo {
-        padding: 10px 20px;
+        padding: 10px 0 10px 0;
         display: flex;
         align-items: center;
+      }
+      .navbar .container {
+        padding-left: 0 ;
+        padding-right: 0 ;
+        min-height: 56px ;
+        height: 56px ;
+        display: flex ;
+        flex-direction: row ;
+        align-items: center;
+        justify-content: space-between ;
+      }
+      .navbar {
+        min-height: 56px ;
+        height: 56px ;
+        padding-top: 0 ;
+        padding-bottom: 0 ;
+      }
+      .navbar-brand {
+        margin: 0 ;
+        padding: 0 ;
+        display: flex;
+        align-items: center;
+      }
+      .navbar-brand img {
+        height: 80px ;
+        width: auto ;
+      }
+      .navbar-nav .nav-link {
+        padding-top: 6px ;
+        padding-bottom: 6px ;
+        font-size: 18px ;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+        margin: 0 10px;
+      }
+      .navbar-nav .nav-link:hover {
+        background-color: #0c4c83;
+        color: #fff !important;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        transform: translateY(-2px);
+      }
+      .btn-custom {
+        padding-top: 6px ;
+        padding-bottom: 6px ;
+        font-size: 16px ;
+      }
+      .navbar-toggler {
+        padding: 4px 8px ;
+        font-size: 22px ;
+        min-height: 40px ;
       }
 
       .heroflex {
@@ -938,9 +988,34 @@
       .text-md-dark {
         color: #212529 !important;
       }
+      
+      .star-rating {
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: 4px;
+        color: #ccc;
+        text-align: center; 
+        width: 100%; 
+        margin: 10px 0; 
+      }
+
+      .stars-3::before {
+        content: "★★★☆☆";
+        color: gold;
+      }
+      .stars-4::before {
+        content: "★★★★☆";
+        color: gold;
+      }
+      .stars-5::before {
+        content: "★★★★★";
+        color: gold;
+      }
+
+
       @media (max-width: 768px) {
         .text-md-dark {
-          color: rgb(211, 211, 211) !important;
+          color: rgb(211, 211, 211) ;
         }
         footer {
           background-color: #0d0d0d;
@@ -1061,7 +1136,7 @@
         }
       }
 
-      @media (max-width: 1199px) {
+      @media (max-width: 1200px) {
         .heroflex {
           width: 85%;
         }
@@ -1091,7 +1166,7 @@
         }
       }
 
-      @media (max-width: 991px) {
+      @media (max-width: 1015px) {
         .reviewBoxesWrapper {
           flex-direction: row;
           flex-wrap: wrap;
@@ -1118,7 +1193,7 @@
         }
         .buttonz {
           justify-content: center;
-          flex-direction: row; /* Ensure buttons stay in row for tablet */
+          flex-direction: row; 
         }
         .hero-image {
           justify-content: center;
@@ -1243,7 +1318,7 @@
         }
       }
 
-      @media (max-width: 767px) {
+      @media (max-width: 769px) {
         .exploreboxsItem img {
           max-width: 180px;
         }
@@ -1306,7 +1381,7 @@
         #advisorySecBoxItem2 p {
           font-size: 15px;
         }
-        /* Button adjustments for mobile */
+      
         .buttonz {
           gap: 15px;
         }
@@ -1354,7 +1429,7 @@
         #advisorySecBoxItem2 p {
           font-size: 15px;
         }
-        /* Stack buttons vertically on very small screens */
+        
         .buttonz {
           flex-direction: column;
           align-items: center;
@@ -1471,7 +1546,7 @@
         }
       }
 
-      @media (max-width: 400px) {
+      @media (max-width: 410px) {
         .herocontent h1 {
           font-size: 28px;
         }
@@ -1605,44 +1680,25 @@
         }
       }
 
-      .star-rating {
-        font-size: 24px;
-        line-height: 1;
-        letter-spacing: 4px;
-        color: #ccc;
-        text-align: center; /* Add this to center the stars */
-        width: 100%; /* Ensure it takes full width */
-        margin: 10px 0; /* Adjust spacing as needed */
-      }
-
-      .stars-3::before {
-        content: "★★★☆☆";
-        color: gold;
-      }
-      .stars-4::before {
-        content: "★★★★☆";
-        color: gold;
-      }
-      .stars-5::before {
-        content: "★★★★★";
-        color: gold;
-      }
     </style>
   </head>
 
   <!-- NAV BAR-->
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-      <div class="container">
+      <div class="container d-flex justify-content-between align-items-center">
         <a class="navbar-brand" href="#">
           <img src="assets/logo.png" alt="Maynilad Logo" height="100" />
         </a>
 
         <button
-          class="navbar-toggler"
+          class="navbar-toggler ms-auto"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
