@@ -28,32 +28,10 @@
         box-sizing: border-box;
       }
 
-      .buttonz li,
-      .buttonz a,
-      .navbarBill {
-        padding: 12px 24px;
-        border-radius: 50px;
-        color: black;
-        font-family: "Lusitana", sans-serif;
-        font-size: 21px;
-        font-weight: 700;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        text-decoration: none;
-        display: inline-block;
-        background-color: transparent;
-        border: none;
-      }
-
-      header button:hover,
-      .boxItem button:hover,
-      .nav_links li:hover,
-      button:hover,
-      .navbarBill :hover {
-        background-color: #0c4c83;
-        color: white;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      body {
+        margin: 0;
+        font-family: "Lusitana", serif;
+        background-color: white;
       }
 
       header {
@@ -72,134 +50,26 @@
         display: block;
       }
 
-      .mobile-menu-toggle {
-        display: none;
-        background: none;
-        border: none;
-        color: #0c4c83;
-        font-size: 24px;
-        padding: 15px;
-        z-index: 1001;
-        cursor: pointer;
-      }
-
-  
-      .mobile-menu {
-        display: none;
-        background-color: #f8f9fa;
-        width: 100%;
-        position: absolute;
-        top: 100px;
-        left: 0;
-        z-index: 1000;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-      .mobile-menu.show {
-        display: block;
-      }
-
-      .mobile-menu ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-
-      .mobile-menu li {
-        padding: 15px 20px;
-        border-bottom: 1px solid #ddd;
-      }
-
-      .mobile-menu a {
-        text-decoration: none;
-        color: #333;
-        font-family: "Lusitana", sans-serif;
-        font-size: 18px;
-        display: block;
-      }
-
-      .mobile-menu a:hover {
-        color: #0c4c83;
-      }
-
       .logo {
         padding: 10px 0 10px 0;
         display: flex;
         align-items: center;
       }
-      .navbar .container {
-        padding-left: 0 ;
-        padding-right: 0 ;
-        min-height: 70px ;
-        height: 70px ;
-        display: flex ;
-        flex-direction: row ;
-        align-items: center;
-        justify-content: space-between ;
-      }
-      .navbar {
-          background: #fff;
-          box-shadow: 0 2px 8px rgba(0,0,0,0.07);
-          min-height: 70px;
-          height: 70px;
-          padding-top: 0;
-          padding-bottom: 0;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-        }
-            .navbar-brand {
-          margin: 0;
-          padding: 0;
-          display: flex;
-          align-items: center;
-        }
-            .navbar-brand img {
-          height: 90px;
-          width: auto;
-          display: block;
-        }
 
-      .navbar-nav .nav-link {
-        color: black;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        font-size: 18px;
+      .btn-custom {
+        padding: 6px 20px;
+        font-size: 16px;
         border-radius: 20px;
-        transition: all 0.3s ease;
-        margin: 0 10px;
-        font-weight: 500;
-        background: transparent;
-      }
-      .navbar-nav .nav-link:hover,
-      .navbar-nav .nav-link.active {
-        background-color: #0c4c83;
-        color: #fff !important;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-        transform: translateY(-2px);
-      }
-
-     .btn-custom {
-      padding: 6px 20px;
-      font-size: 16px;
-      border-radius: 20px;
-      background: #0c4c83;
-      color: #fff;
-      border: none;
-      transition: background 0.2s;
+        background: #0c4c83;
+        color: #fff;
+        border: none;
+        transition: background 0.2s;
       }
       .btn-custom:hover {
-       background: #08335a;
-      color: #fff;
+        background: #08335a;
+        color: #fff;
       }
-      .navbar-toggler {
-       padding: 4px 8px;
-       font-size: 22px;
-       min-height: 40px;
-       border-radius: 8px;
-       border: 1px solid #0c4c83;
-       color: #0c4c83;
-      background: #fff;
-      }
+
       .heroflex {
         position: relative;
         background-color: transparent;
@@ -328,53 +198,6 @@
 
       .logo {
         cursor: pointer;
-      }
-
-      .nav__links {
-        display: flex;
-        align-items: center;
-        gap: 40px;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-      }
-
-      .nav__links li {
-        display: inline-block;
-        padding: 0;
-      }
-
-      .nav__links li:hover {
-        color: #0c4c83;
-        display: inline-block;
-      }
-
-      .nav__links li a {
-        padding: 12px 24px;
-        border-radius: 50px;
-        color: black;
-        font-family: "Lusitana", sans-serif;
-        font-size: 21px;
-        font-weight: 700;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        text-decoration: none;
-        display: inline-block;
-      }
-      .nav__links a:hover {
-        background-color: #0c4c83;
-        color: white;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      }
-
-      header button {
-        padding: 9px 25px;
-        border: none;
-        border-radius: 50px;
-        cursor: pointer;
-        transition: all 0.3s ease 0s;
-        background-color: white;
       }
 
       .box1section {
@@ -617,26 +440,6 @@
         display: inline-block;
         background-color: transparent;
         border: none;
-      }
-
-      .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 80%;
-        margin: 60px auto;
-        background-color: #ffffff;
-        overflow: hidden;
-      }
-
-      .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 80%;
-        margin: 60px auto;
-        background-color: #ffffff;
-        overflow: hidden;
       }
 
       .item {
@@ -987,7 +790,7 @@
       }
 
       .footer-bottom .hotline p {
-        font-size: 20px ;
+        font-size: 20px;
         color: black;
         margin: 0;
       }
@@ -1032,7 +835,6 @@
         color: #212529;
       }
 
-
       footer h5 {
         font-size: 20px;
         font-weight: bold;
@@ -1043,15 +845,15 @@
         font-size: 20px;
         color: #212529;
       }
-      
+
       .star-rating {
         font-size: 24px;
         line-height: 1;
         letter-spacing: 4px;
         color: #ccc;
-        text-align: center; 
-        width: 100%; 
-        margin: 10px 0; 
+        text-align: center;
+        width: 100%;
+        margin: 10px 0;
       }
 
       .stars-3::before {
@@ -1067,10 +869,9 @@
         color: gold;
       }
 
-
       @media (max-width: 768px) {
         .text-md-dark {
-          color: rgb(211, 211, 211) ;
+          color: rgb(211, 211, 211);
         }
         footer {
           background-color: #0d0d0d;
@@ -1233,9 +1034,7 @@
           height: auto;
           margin: 0;
         }
-        header {
-          padding: 0 3%;
-        }
+
         .heroflex {
           flex-direction: column;
           padding: 40px;
@@ -1248,7 +1047,7 @@
         }
         .buttonz {
           justify-content: center;
-          flex-direction: row; 
+          flex-direction: row;
         }
         .hero-image {
           justify-content: center;
@@ -1343,13 +1142,7 @@
           max-width: 100%;
           padding: 0 20px;
         }
-        .nav__links {
-          gap: 20px;
-          display: none;
-        }
-        .nav__links li a {
-          padding: 10px 15px;
-        }
+
         .latestNewsTitle {
           margin-bottom: 40px;
           margin-top: 80px;
@@ -1406,11 +1199,7 @@
         .mapSection {
           padding: 40px 0;
         }
-        .container {
-          width: 90%;
-          margin: 40px auto;
-          flex-direction: column;
-        }
+
         .item {
           padding: 20px 15px;
           width: 100%;
@@ -1436,7 +1225,7 @@
         #advisorySecBoxItem2 p {
           font-size: 15px;
         }
-      
+
         .buttonz {
           gap: 15px;
         }
@@ -1484,7 +1273,7 @@
         #advisorySecBoxItem2 p {
           font-size: 15px;
         }
-        
+
         .buttonz {
           flex-direction: column;
           align-items: center;
@@ -1532,10 +1321,7 @@
           margin-bottom: 30px;
           margin-top: 60px;
         }
-        .container {
-          flex-direction: column;
-          width: 95%;
-        }
+
         .item:not(:first-child) {
           border-left: none;
           border-top: 3px solid black;
@@ -1642,119 +1428,26 @@
       }
 
       @media (max-width: 780px) {
-        header {
-          position: relative;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 15px 5%;
-          height: 70px;
-          background: white;
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .nav__links,
-        .navbarBill {
-          display: none;
-        }
-        .mobile-menu-toggle {
-          display: flex !important;
-          align-items: center;
-          justify-content: center;
-          background: none;
-          border: none;
-          width: 40px;
-          height: 40px;
-          padding: 0;
-          cursor: pointer;
-          z-index: 1100;
-          color: #0c4c83;
-          margin-right: 15px;
-        }
-        .mobile-menu {
-          display: none;
-          background-color: #f8f9fa;
-          width: 100%;
-          position: absolute;
-          top: 70px;
-          left: 0;
-          z-index: 1000;
-          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-          text-align: left; /* Align menu items to left */
-          padding-left: 20px; /* Add some left padding */
-        }
-        .mobile-menu.show {
-          display: block;
-        }
-        .mobile-menu ul {
-          padding: 10px 0; 
-          border-bottom: 1px solid #ddd;
-          width: 95%; 
-        }
-        .mobile-menu li {
-          padding: 15px 20px;
-          border-bottom: 1px solid #ddd;
-        }
-        .mobile-menu a {
-         text-decoration: none;
-        color: black; 
-        font-family: "Lusitana", sans-serif;
-        font-size: 18px;
-        display: block;
-        background: none;
-        border: none;
-        text-align: left;
-        width: 100%;
-        padding: 10px 15px; 
-        transition: all 0.3s ease;
-        border-radius: 50px; 
-        }
-        .mobile-menu .navbarBill {
-           display: block;
-            padding: 12px 24px;
-            margin: 15px 0; 
-            border-radius: 50px;
-            color: black; 
-            font-family: "Lusitana", sans-serif;
-            font-size: 18px;
-            font-weight: 700;
-            background-color: transparent;
-            border: none;
-            text-align: left;
-            width: 95%; 
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-      mobile-menu a:hover,
-      .mobile-menu .navbarBill:hover {
-        background-color: #0c4c83; 
-        color: white;
-        transform: translateY(-2px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      }
         #advisorySecBoxItem2 p {
           font-size: 15px;
         }
       }
-
     </style>
   </head>
 
   <!-- NAV BAR-->
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
-      <div class="container d-flex justify-content-between align-items-center">
+      <div class="container">
         <a class="navbar-brand" href="#">
-          <img src="assets/logo.png" alt="Maynilad Logo"/>
+          <img src="assets/logo.png" alt="Maynilad Logo" height="100" />
         </a>
 
         <button
-          class="navbar-toggler ms-auto"
+          class="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -2018,127 +1711,71 @@
     </div>
 
     <!-- FOOTER -->
-<footer>
-  <div class="footer-content-wrapper">
-    <!-- Logo -->
-    <div class="footer-logo">
-      <img src="assets/logo.png" alt="Company Logo" />
-    </div>
+    <footer>
+      <div class="footer-content-wrapper">
+        <!-- Logo -->
+        <div class="footer-logo">
+          <img src="assets/logo.png" alt="Company Logo" />
+        </div>
 
-    <!-- Navigation -->
-    <div class="footer-nav">
-      <button>About Us</button>
-      <button>Our Services</button>
-      <button>Support Center</button>
-      <button>Privacy Policy</button>
-      <button>Terms of Use</button>
-    </div>
+        <!-- Navigation -->
+        <div class="footer-nav">
+          <button>About Us</button>
+          <button>Our Services</button>
+          <button>Support Center</button>
+          <button>Privacy Policy</button>
+          <button>Terms of Use</button>
+        </div>
 
-    <!-- Divider -->
-    <div class="divider"></div>
+        <!-- Divider -->
+        <div class="divider"></div>
 
-    <!-- Footer Bottom -->
-    <div class="footer-bottom">
-      <div>
-        <h5 class="fw-bold text-md-dark">Socials</h5>
-        <div class="social-icons">
-          <a href="#"><img src="assets/SF.png" alt="Facebook" /></a>
-          <a href="#"><img src="assets/SX.png" alt="Twitter" /></a>
-          <a href="#"><img src="assets/SY.png" alt="YouTube" /></a>
-          <a href="#"><img src="assets/SI.png" alt="Instagram" /></a>
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <div>
+            <h5 class="fw-bold text-md-dark">Socials</h5>
+            <div class="social-icons">
+              <a href="#"><img src="assets/SF.png" alt="Facebook" /></a>
+              <a href="#"><img src="assets/SX.png" alt="Twitter" /></a>
+              <a href="#"><img src="assets/SY.png" alt="YouTube" /></a>
+              <a href="#"><img src="assets/SI.png" alt="Instagram" /></a>
+            </div>
+          </div>
+
+          <div>
+            <h5 class="fw-bold text-md-dark">Address</h5>
+            <p class="footer-btn">
+              Maynilad Building, MWSS Complex<br />
+              Katipunan Avenue, Pansol 1119<br />
+              Quezon City, Philippines
+            </p>
+          </div>
+
+          <div>
+            <h5 class="fw-bold text-md-dark">Hotline</h5>
+            <p class="footer-btn">1626</p>
+          </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Copyright -->
+        <div class="text-center mt-3">
+          <small class="text-md-dark"
+            >©2023 Maynilad Water Services, Inc.</small
+          >
         </div>
       </div>
+    </footer>
 
-      <div>
-        <h5 class="fw-bold text-md-dark">Address</h5>
-        <p class="footer-btn">
-          Maynilad Building, MWSS Complex<br />
-          Katipunan Avenue, Pansol 1119<br />
-          Quezon City, Philippines
-        </p>
-      </div>
-
-      <div>
-        <h5 class="fw-bold text-md-dark">Hotline</h5>
-        <p class="footer-btn">1626</p>
-      </div>
-    </div>
-
-    <div class="divider"></div>
-
-    <!-- Copyright -->
-    <div class="text-center mt-3">
-      <small class="text-md-dark">©2023 Maynilad Water Services, Inc.</small>
-    </div>
-  </div>
-</footer>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        const menuToggle = document.querySelector(".mobile-menu-toggle");
-        const mobileMenu = document.querySelector(".mobile-menu");
-
-        if (menuToggle && mobileMenu) {
-          menuToggle.addEventListener("click", function () {
-            mobileMenu.classList.toggle("show");
-
-            const icon = this.querySelector("i");
-            if (mobileMenu.classList.contains("show")) {
-              icon.classList.remove("fa-bars");
-              icon.classList.add("fa-times");
-            } else {
-              icon.classList.remove("fa-times");
-              icon.classList.add("fa-bars");
-            }
-          });
-        }
-
-        function navigateTo(page) {
-          window.location.href = page;
-        }
-
-        const logo = document.querySelector(".logo");
-        if (logo) {
-          logo.addEventListener("click", () => navigateTo("index.html"));
-        }
-
-        // Desktop nav links
-        const desktopLinks = document.querySelectorAll(".nav__links li a");
-        if (desktopLinks.length >= 3) {
-          desktopLinks[0].addEventListener("click", (e) => {
-            e.preventDefault();
-            navigateTo("index.html");
-          });
-          desktopLinks[1].addEventListener("click", (e) => {
-            e.preventDefault();
-            navigateTo("about.html");
-          });
-          desktopLinks[2].addEventListener("click", (e) => {
-            e.preventDefault();
-            navigateTo("services.html");
-          });
-        }
-
-        const mobileLinks = document.querySelectorAll(".mobile-menu ul li a");
-        if (mobileLinks.length >= 3) {
-          mobileLinks[0].addEventListener("click", (e) => {
-            e.preventDefault();
-            navigateTo("home page.html");
-          });
-          mobileLinks[1].addEventListener("click", (e) => {
-            e.preventDefault();
-            navigateTo("about page.html");
-          });
-          mobileLinks[2].addEventListener("click", (e) => {
-            e.preventDefault();
-            navigateTo("service page.html");
-          });
-        }
-
-        const billButtons = document.querySelectorAll(".navbarBill");
-        billButtons.forEach((button) => {
-          button.addEventListener("click", () => navigateTo("bill.html"));
-        });
-      });
-    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
   </body>
 </html>
